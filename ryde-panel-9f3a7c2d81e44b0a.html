@@ -23,20 +23,20 @@
 </head>
 <body>
 <div class="card">
-    <h1>The strat.</h1>
+    <h1>Web BLe-panel</h1>
     <div class="status"><div><span class="led" id="statusLed"></span> <span id="statusText">Disconnected</span></div><span id="deviceName">—</span></div>
     <div class="log" id="logPanel">Trykk skann, deretter velg BLE-enheten din.</div>
-    <div class="flex"><button id="scanBtn" class="primary">🔍 SCAN</button><button id="disconnectBtn">Disconnect</button></div>
+    <div class="flex"><button id="scanBtn" class="primary">Skann</button><button id="disconnectBtn">Disconnect</button></div>
     <div class="grid">
         <button id="unlockBtn" disabled>Lås opp</button>
         <button id="lockBtn" disabled>Lås</button>
         <button id="batteryOnBtn" disabled>Aktiver Batteri</button>
         <button id="batteryOffBtn" disabled>Deaktiver Batteri</button>
-        <button id="speedUpBtn" disabled>Heis Farten</button>
-        <button id="speedDownBtn" disabled>Senk Speed</button>
+        <button id="speedUpBtn" disabled>Øk Farten</button>
+        <button id="speedDownBtn" disabled>Senk Farten</button>
     </div>
-    <input type="text" id="rawHex" placeholder="Hex command">
-    <button id="sendRawBtn" disabled>Send raw</button>
+    <input type="text" id="rawHex" placeholder="Hexkommando">
+    <button id="sendRawBtn" disabled>Send råkommando</button>
 </div>
 <script>
     let device = null, characteristic = null;
