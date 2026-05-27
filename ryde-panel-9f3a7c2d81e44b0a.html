@@ -70,7 +70,7 @@
         if(!navigator.bluetooth){ addLog('Web Bluetooth er ikke støttet! Velg en annen nettleser, eller konfigurer enheten din.',1); return; }
         try{
             addLog('Skanner alle enheter...');
-            let selected = await navigator.bluetooth.requestDevice({ acceptAllDevices: true, optionalServices: [] });
+            let selected = await navigator.bluetooth.requestDevice({ acceptAllDevices: true, optionalServices: ['generic_access'] });
             if(!selected.name) addLog(`Unavngitt Enhet (${selected.id}) valgt`,1);
             else addLog(`Valgt: ${selected.name}`);
             deviceNameSpan.innerText = selected.name || '?';
