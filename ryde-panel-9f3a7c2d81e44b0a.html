@@ -141,7 +141,7 @@ async function scanAndConnect(){
 
         let selected = await navigator.bluetooth.requestDevice({
             acceptAllDevices: true,
-            optionalServices: ['86531001-43e6-47b7-9cb0-5fc21d4ae340']
+            optionalServices: ['generic_attribute', '86531001-43e6-47b7-9cb0-5fc21d4ae340']
         });
 
         deviceNameSpan.innerText = selected.name || '?';
